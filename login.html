@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GasApp Login Page</title>
+    <link rel="stylesheet" href="assets/css/login.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div id="logo">
+          <img src="assets/img/logo.png" alt="Logo" id="logo-img" />
+        </div>
+
+        <div id="createBox">
+          <a href="signup.html" class="createAccount">Create Account</a>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div id="CarGasStation">
+          <img
+            src="assets/img/carleftimg.png"
+            alt="Car Gas Station "
+            id="car-img"
+          />
+        </div>
+
+        <div id="loginBox">
+          <form>
+            <h2>
+              Login your account on <br />
+              <span>Gas</span>App.
+            </h2>
+
+            <div class="form-group">
+              <div class="input-icon">
+                <img src="assets/img/email.svg" alt="Email Icon" />
+                <input type="email" placeholder="Email" class="form-control" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-icon">
+                <img src="assets/img/pasword.svg" alt="Password Icon" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="password"
+                  class="form-control"
+                />
+                <img
+                  src="assets/img/eyeHide.svg"
+                  id="eye-icon"
+                  alt="Eye Icon"
+                  onclick="togglePassword()"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+            <div class="forgot-password">
+              <a href="#">Forgot Password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function togglePassword() {
+        var passwordField = document.getElementById("password");
+        var eyeIcon = document.getElementById("eye-icon");
+
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          eyeIcon.src = "assets/img/eye.svg";
+        } else {
+          passwordField.type = "password";
+          eyeIcon.src = "assets/img/eyeHide.svg";
+        }
+      }
+    </script>
+  </body>
+</html>

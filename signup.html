@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GasApp Sign Up Page</title>
+    <link rel="stylesheet" href="assets/css/signup.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div id="logo">
+          <img src="assets/img/logo.png" alt="Logo" />
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div id="CarGasStation">
+          <img
+            src="assets/img/carleftimg.png"
+            alt="Car Gas Station"
+            id="car-img"
+          />
+        </div>
+
+        <div class="signup-section">
+          <div class="SignUp-Box">
+            <form id="Register-Form">
+              <h2>Register your account!</h2>
+
+              <p>
+                We invite you to join the GasApp community! Create and verify
+                your profile to get fuel credit for your vehicle!
+              </p>
+
+              <div class="input-first-last-name">
+                <div class="input-group-first-name">
+                  <div class="input-icon">
+                    <img
+                      src="assets/img/user.svg"
+                      class="img-icon"
+                      alt="User Icon"
+                    />
+
+                    <input
+                      type="text"
+                      id="firstName"
+                      placeholder="First name"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-group-last-name">
+                  <div class="input-icon">
+                    <img
+                      src="assets/img/user.svg"
+                      class="img-icon"
+                      alt="User Icon"
+                    />
+
+                    <input
+                      type="text"
+                      id="lastName"
+                      placeholder="Last name"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <img
+                    src="assets/img/email.svg"
+                    class="img-icon"
+                    alt="Email Icon"
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <img
+                    src="assets/img/pasword.svg"
+                    class="img-icon"
+                    alt="Password Icon"
+                  />
+
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    class="form-control"
+                  />
+
+                  <img
+                    src="assets/img/eyeHide.svg"
+                    id="eye-icon"
+                    alt="Eye Icon"
+                    onclick="togglePassword('password','eye-icon')"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <img
+                    src="assets/img/pasword.svg"
+                    class="img-icon"
+                    alt="Re-Type Password Icon"
+                  />
+
+                  <input
+                    type="password"
+                    id="retype-password"
+                    placeholder="Re-type password"
+                    class="form-control"
+                  />
+
+                  <img
+                    src="assets/img/eyeHide.svg"
+                    id="eyeHide-icon"
+                    alt="Eye Icon"
+                    onclick="togglePassword('retype-password','eyeHide-icon')"
+                  />
+                </div>
+              </div>
+
+              <button type="submit" id="createAccount-btn">
+                Create account
+              </button>
+            </form>
+          </div>
+
+          <div class="login-box">
+            <a href="login.html" class="login-btn">Log in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function togglePassword(pwdId, eyeIconId) {
+        var passwordField = document.getElementById(pwdId);
+        var eyeIcon = document.getElementById(eyeIconId);
+
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          eyeIcon.src = "assets/img/eye.svg";
+        } else {
+          passwordField.type = "password";
+          eyeIcon.src = "assets/img/eyeHide.svg";
+        }
+      }
+    </script>
+  </body>
+</html>
